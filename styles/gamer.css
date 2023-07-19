@@ -116,7 +116,13 @@ font-weight: 700;
     color: #0B0223; font-family: Work Sans; font-size: 20px; font-weight: 600; padding: 10px;
 }
 .game_option{
-    display: flex; gap: 27px; align-items: center;  width: 100%; background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%); margin-left: 239px; margin-right: 239px; margin-bottom: 20px;
+       width: 400px; background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);  margin-right: 239px; margin-bottom: 20px;
+
+    display: grid;
+  grid-template-columns: repeat(5,1fr);
+  padding: 10px; margin-left: 240px;
+
+  gap: 27px; align-items: center;
 }
 .game_option_scnd{
     margin-left: 325px; margin-right: 325px;
@@ -140,7 +146,9 @@ font-weight: 700;
      margin-left: 830px; padding-top: 120px;
 }
 .footer_opt{
-    display: flex; gap: 60px; margin: 5px 550px; margin-bottom: 50px;
+     margin: 1px 550px; padding: 5px; height: 100px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr); gap: 60px;
 }
 .footer_one_opt{
     color: #FFF;
@@ -151,10 +159,10 @@ font-weight: 600;
 }
 
 .footer_icon{
-    display: flex; gap: 60px; margin-left: 730px; margin-right: 730px; margin-bottom: 54px;
+    display: grid; gap: 60px; margin-left: 730px; margin-right: 730px; margin-bottom: 54px; grid-template-columns: repeat(6,1fr); gap: 60px;
 }
  .footer_policy{
-    display: inline-flex; padding: 10px; align-items: flex-start; gap: 60px; margin-left: 606px;
+    display: grid; padding: 10px; grid-template-columns: repeat(4,1fr); gap: 60px; gap: 60px; margin-left: 606px;
  }
  .footer_one_pol{
     color: rgba(255, 255, 255, 0.60);
@@ -166,3 +174,132 @@ font-weight: 500;
  .cpyr8{
     margin-left: 735px;
  }
+
+ @media screen and (min-width: 576px) and (max-width: 992px){
+    .menu{
+        margin-left: 50px;
+    }
+    .banner{
+        flex-direction: column;margin-bottom: 20px; height: 300px;
+    }
+    .goat{
+        flex-direction: column-reverse; 
+    }
+    .goat_img{
+        margin-top: 10px;
+    }
+    .online_img{
+        flex-direction: column; 
+    }
+    .one_img_desc{
+        font-size: 18px;
+    }
+    .play_games{
+        flex-direction: column-reverse;
+    }
+    .game_option, .game_option_scnd{
+        display: grid;
+  grid-template-columns: repeat(4, 1fr); margin-left: 0px;
+    }
+    .goat_img{
+        width: 700px; 
+    }
+    .online_img{
+        margin-left: 210px;
+    }
+    .play{
+        margin-left: 0px;
+    }
+    .play_games_full_title{
+        margin-left: 1px;
+    }
+    .frst_image{
+        height: max-content;
+    }
+    .scnd_img{
+        height: max-content; margin-left: 400px;
+    }
+    .footer_title{
+        margin-left: 50px;
+    }
+    .footer_div{
+        width: 600px; height: 2000px;
+    }
+    .footer_opt{
+        grid-template-columns: repeat(4,1fr); margin-left: 20px;
+    }
+    .footer_icon{
+        margin-left: 20px; grid-template-columns: repeat(4,1fr); gap: 60px; margin-top: 150px;
+    }
+    .footer_policy{
+        margin-left: 10px; grid-template-columns: repeat(4,1fr); gap: 0px; 
+    }
+    .cpyr8{
+        margin-left: 10px;
+    }
+ }
+
+ @media screen and (max-width: 576px){
+    .menu{
+        flex-direction: column; 
+    }
+    .banner{
+        flex-direction: column;margin-bottom: 20px; height: 500px;
+    }
+    .goat{
+        flex-direction: column-reverse; 
+    }
+    .goat_img{
+        margin-top: 10px;
+    }
+    .online_img{
+        flex-direction: column; 
+    }
+    .one_img_desc{
+        font-size: 18px;
+    }
+    .play_games{
+        flex-direction: column-reverse;
+    }
+    .game_option, .game_option_scnd{
+        display: grid;
+  grid-template-columns: repeat(3, 1fr); margin-left: 0px;
+    }
+    .goat_img{
+        width: 300px; 
+    }
+    .online_img{
+        margin-left: 210px;
+    }
+    .play{
+        margin-left: 0px;
+    }
+    .play_games_full_title{
+        margin-left: 1px;
+    }
+    .frst_image{
+        height: max-content;
+    }
+    .scnd_img{
+        height: max-content; margin-left: 400px;
+    }
+    .footer_title{
+        margin-left: 50px;
+    }
+    .footer_div{
+        width: 600px; height: 2000px;
+    }
+    .footer_opt{
+        grid-template-columns: repeat(3,1fr); margin-left: 20px;
+    }
+    .footer_icon{
+        margin-left: 20px; grid-template-columns: repeat(3,1fr); gap: 60px; margin-top: 150px;
+    }
+    .footer_policy{
+        margin-left: 10px; grid-template-columns: repeat(2,1fr); gap: 0px; 
+    }
+    .cpyr8{
+        margin-left: 10px;
+    }
+ }
+
