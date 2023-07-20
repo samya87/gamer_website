@@ -6,7 +6,6 @@ text-align: center; font-family: Work Sans; font-size: 45px; font-weight: 700;
 }
 .logo_title{
     display: flex; gap: 20px; align-items: center;
-    
 }
 
 .ytb_icon{
@@ -36,8 +35,9 @@ text-align: center; font-family: Work Sans; font-size: 45px; font-weight: 700;
 }
 
 .play{
-    color: #0B0223; text-align: center; font-family: Work Sans; font-size: 48px; font-weight: 600; line-height: normal; text-transform: uppercase; margin-bottom: 0px;
+    color: #0B0223; text-align: center; font-family: Work Sans; font-size: 48px; font-weight: 600; line-height: normal; text-transform: uppercase; margin-bottom: 0px; margin-top: 140px;
 }
+
 .goat_title{
     text-align: center; font-family: Work Sans; font-size: 95px; font-weight: 800; text-transform: uppercase; margin-top: 0px; margin-bottom: 24px;
     
@@ -46,21 +46,34 @@ text-align: center; font-family: Work Sans; font-size: 45px; font-weight: 700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.funny_title{
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.goat_descript{
+    width: 900px; height: 700px;
+}
+.goat_opt{
+    margin-left: 275px; color: #534C64; text-align: center; font-family: Work Sans; font-size: 20px; font-weight: 500; text-transform: lowercase;
+}
 .sign_in_btn{
-    border-radius: 48px; border: 0px; background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%)); padding: 21px 40px; color: #FFF;
+    border-radius: 48px; border: 0px; background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%)); padding: 21px 40px; color: #FFF; margin-top: 40px;
     font-family: Work Sans; font-size: 20px; font-weight: 600;
 }
 .rouge_btn{
     background: #4EC5F7; color: #FFF;
 }
 .goat_btn{
-    display: flex; gap: 24px;
+    display: flex; gap: 24px; justify-content: center;
 }
+.goat_img{ margin-right: 240px;}
 .goat{
-    display: flex; justify-content: space-between; margin-left: 240px; align-items: center; margin-right: 240px;
+    display: flex; justify-content: space-between; margin-left: 240px; align-items: center;  width: 100%;
     
 }
+
 
 .online_title{
     color: #0B0223; text-align: center; font-family: Work Sans; font-size: 48px; font-weight: 700; margin-top: 120px; margin-bottom: 16px;
@@ -69,13 +82,37 @@ text-align: center; font-family: Work Sans; font-size: 45px; font-weight: 700;
     color: #534C64; text-align: center; font-family: Work Sans; font-size: 18px; font-weight: 400; line-height: 30px; /* 166.667% */ margin-bottom: 48px;
 }
 .one_img{
-    width: 342px; height: 400px; border-radius: 16px;
+    width: 342px; height: 400px; border-radius: 16px; 
+    
+  transition: .1s ease;
+  backface-visibility: hidden; opacity: 1;
 }
+.one_img:hover {
+    border: 5px solid #F948B2;
+  }
+
+
+  .container {
+    position: relative; width: 50%;
+  }
+  .middle {
+    transition: .1s ease; opacity: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%);text-align: center;
+  }
+  
+  .container:hover .one_img {
+    opacity: 0.6;
+  }
+  
+  .container:hover .middle {
+    opacity: .7;
+  }
+
+
 .one_img_desc{
     color: #534C64; font-family: Work Sans; font-size: 20px; font-weight: 500; line-height: 30px; /* 150% */ width: 342px;
 }
 .online_img{
-    display: flex; gap:24px ; margin-left: 240px; align-items: center; margin-right: 240px; margin-bottom: 120px;
+    display: flex; gap:24px ; margin-left: 240px; justify-content: center; align-items: center; margin-right: 240px; margin-bottom: 120px;
 }
 
 
@@ -107,22 +144,21 @@ font-weight: 700;
 }
 
 .play_games{
-    display: flex;  margin-left: 240px;  margin-right: 240px; margin-bottom: 120px; justify-content: space-between;
+    display: flex;  margin-left: 240px;  margin-right: 300px; margin-bottom: 0px; gap: 250px; width: 100%; 
 }
 
 /* games option */
 .game_option_btn{
-     border-color: #FFF; width: 317px; height: 80px; border-radius: 50px; background: #FFF; display: flex; gap: 16px; align-items: center; 
-    color: #0B0223; font-family: Work Sans; font-size: 20px; font-weight: 600; padding: 10px;
+     border-color: #FFF; width: 248px; height: 80px; border-radius: 50px; background: #FFF; display: flex; gap: 16px; align-items: center; 
+    color: #0B0223; font-family: Work Sans; font-size: 20px; font-weight: 600; padding: 1.5px;
+}
+.game_one_opt{
+    font-family: Work Sans; font-size: 20px; font-weight: 600; margin-left: 20px;
 }
 .game_option{
-       width: 400px; background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);  margin-right: 239px; margin-bottom: 20px;
-
-    display: grid;
-  grid-template-columns: repeat(5,1fr);
-  padding: 10px; margin-left: 240px;
-
-  gap: 27px; align-items: center;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; align-items: center;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%); 
+    width: 86%; padding-right: 280px; padding-left: 240px; padding-bottom: 120px; padding-top: 120px;  height: 227px;
 }
 .game_option_scnd{
     margin-left: 325px; margin-right: 325px;
@@ -135,15 +171,16 @@ font-weight: 700;
     
 }
 .game_option_img{
-    border-radius: 50px;
+    border-radius: 50px; margin-left: 16px;
 }
 
 /* footer title */
 .footer_div{
-    width: 100%; height: 636px; background: #0B0223; align-items: center;
+    width: 113%;
+height: 636px; background: #0B0223; align-items: center; justify-content: center; 
 }
 .footer_title{
-     margin-left: 830px; padding-top: 120px;
+    justify-content: center;   padding-top: 120px;
 }
 .footer_opt{
      margin: 1px 550px; padding: 5px; height: 100px;
@@ -162,77 +199,101 @@ font-weight: 600;
     display: grid; gap: 60px; margin-left: 730px; margin-right: 730px; margin-bottom: 54px; grid-template-columns: repeat(6,1fr); gap: 60px;
 }
  .footer_policy{
-    display: grid; padding: 10px; grid-template-columns: repeat(4,1fr); gap: 60px; gap: 60px; margin-left: 606px;
+    display: flex; gap: 60px; margin-right: 606px; margin-left: 606px; justify-content: center; 
  }
  .footer_one_pol{
-    color: rgba(255, 255, 255, 0.60);
-text-align: center;
-font-family: Work Sans;
-font-size: 16px;
-font-weight: 500;
+    color: rgba(255, 255, 255, 0.60); text-align: center; font-family: Work Sans; font-size: 18px; font-weight: 600;
  }
  .cpyr8{
-    margin-left: 735px;
+    margin-bottom: 130px; display: block; text-align: center; 
  }
 
- @media screen and (min-width: 576px) and (max-width: 992px){
+ @media screen and (min-width: 576px) and (max-width: 992px)
+ {
+    .logo_title{ 
+        justify-content: center; margin-top: 100px;
+    }
     .menu{
-        margin-left: 50px;
+        flex-direction: column; margin: 100px; margin-top: 0px;
     }
     .banner{
-        flex-direction: column;margin-bottom: 20px; height: 300px;
+        flex-direction: column;margin-bottom: 20px; height: 500px; justify-content: center; width: 120%;
     }
     .goat{
         flex-direction: column-reverse; 
     }
     .goat_img{
-        margin-top: 10px;
+        margin-top: 10px; width: 500px; display: block; justify-content: center; margin-left: 200px;
+    }
+    .goat_descript{
+        width: 700px;
+    }
+
+    /* ....... */
+    .online_title{
+        width: 500px; text-align: center; display: block; margin-left: 330px; font-size: 30px;
+    }
+    .online_desc{
+        width: 500px; text-align: center; display: block; margin-left: 310px;
     }
     .online_img{
-        flex-direction: column; 
+        flex-direction: column; margin-left: 250px;  width: 100%; margin-bottom: 0px;
+    }
+    
+    .one_img{
+        display: block; justify-content: center; width: 400px; height: 425px; 
     }
     .one_img_desc{
-        font-size: 18px;
+        font-size: 18px; display: block; text-align: center; margin-bottom: 20px; width: 600px; justify-content: center; margin-left: -100px;
     }
+    /* .......... */
     .play_games{
-        flex-direction: column-reverse;
-    }
-    .game_option, .game_option_scnd{
-        display: grid;
-  grid-template-columns: repeat(4, 1fr); margin-left: 0px;
-    }
-    .goat_img{
-        width: 700px; 
-    }
-    .online_img{
-        margin-left: 210px;
+        flex-direction: column-reverse; gap: 10px;
     }
     .play{
         margin-left: 0px;
     }
     .play_games_full_title{
-        margin-left: 1px;
+        margin-left: 100px; text-align: center; width: 500px; margin-bottom: 0px;
+    }
+    .play_games_about{
+        margin-left: 100px; text-align: center; margin-top: 0px;
     }
     .frst_image{
-        height: max-content;
+        height: 500px; width: 550px; display: block; justify-content: center; margin: auto;
     }
     .scnd_img{
-        height: max-content; margin-left: 400px;
+        height: 220px; width: 215px; margin-left: 500px; bottom:150px
     }
+
+    /* ......... */
+    .game_option, .game_option_scnd{
+        display: grid;
+  grid-template-columns: repeat(3, 1fr); margin-left: 50px; margin-bottom: 00px; gap: 15px; height: 190px; 
+  
+    }
+    .game_option_btn{
+        font-size: 17px; width: 220px; gap: 5px;
+    }
+    .game_option_img{
+        width: 45px; margin-left: .5px;
+    }
+    
+    /* ................. */
     .footer_title{
         margin-left: 50px;
     }
     .footer_div{
-        width: 600px; height: 2000px;
+        width: 153%; height: 1000px;
     }
     .footer_opt{
-        grid-template-columns: repeat(4,1fr); margin-left: 20px;
+        display: grid; grid-template-columns: repeat(3,.2fr); margin-top: 60px; margin-left: 400px; gap: 10px; width: 50%; 
     }
     .footer_icon{
-        margin-left: 20px; grid-template-columns: repeat(4,1fr); gap: 60px; margin-top: 150px;
+        display: grid; grid-template-columns: repeat(6,1fr); gap: 70px; margin-top: 60px; align-self: center; margin-left: 300px;
     }
     .footer_policy{
-        margin-left: 10px; grid-template-columns: repeat(4,1fr); gap: 0px; 
+        display: grid; grid-template-columns: repeat(4,1fr); gap: 5px; margin-top: 60px; margin-left: 300px; width: 50%;
     }
     .cpyr8{
         margin-left: 10px;
@@ -240,49 +301,69 @@ font-weight: 500;
  }
 
  @media screen and (max-width: 576px){
+    .logo_title{ 
+        justify-content: center; margin-top: 100px;
+    }
     .menu{
-        flex-direction: column; 
+        flex-direction: column; margin: 100px; margin-top: 0px;
     }
     .banner{
-        flex-direction: column;margin-bottom: 20px; height: 500px;
+        flex-direction: column;margin-bottom: 20px; height: 500px; justify-content: center; width: 120%;
     }
     .goat{
         flex-direction: column-reverse; 
     }
     .goat_img{
-        margin-top: 10px;
+        margin-top: 10px; width: 500px; display: block; justify-content: center; margin-left: 200px;
+    }
+
+    /* ....... */
+    .online_title{
+        width: 500px; text-align: center; display: block; margin-left: 200px; margin-left: 200px; font-size: 30px;
+    }
+    .online_desc{
+        width: 500px; text-align: center; display: block; margin-left: 200px; margin-left: 200px;
     }
     .online_img{
-        flex-direction: column; 
+        flex-direction: column; margin-left: 250px;  width: 100%; margin-bottom: 0px;
+    }
+    
+    .one_img{
+        display: block; justify-content: center; width: 400px; height: 425px; 
     }
     .one_img_desc{
-        font-size: 18px;
+        font-size: 18px; display: block; text-align: center; margin-bottom: 20px;
     }
+    /* .......... */
     .play_games{
-        flex-direction: column-reverse;
-    }
-    .game_option, .game_option_scnd{
-        display: grid;
-  grid-template-columns: repeat(3, 1fr); margin-left: 0px;
-    }
-    .goat_img{
-        width: 300px; 
-    }
-    .online_img{
-        margin-left: 210px;
+        flex-direction: column-reverse; gap: 10px;
     }
     .play{
         margin-left: 0px;
     }
     .play_games_full_title{
-        margin-left: 1px;
+        margin-left: 1px; text-align: center;
     }
     .frst_image{
-        height: max-content;
+        height: 400px; width: 450px;
     }
     .scnd_img{
-        height: max-content; margin-left: 400px;
+        height: 210px; width: 200px; margin-left: 330px; bottom:150px
     }
+    /* ......... */
+    .game_option, .game_option_scnd{
+        display: grid;
+  grid-template-columns: repeat(3, 1fr); margin-bottom: 500px; gap: 15px; height: 190px; background-color: #4EC5F7;
+    }
+    .game_option_btn{
+        font-size: 17px; width: 200px; gap: 5px;
+    }
+    .game_option_img{
+        width: 45px; margin-left: .5px;
+    }
+    /* ........ */
+    
+    /* ................. */
     .footer_title{
         margin-left: 50px;
     }
@@ -302,4 +383,5 @@ font-weight: 500;
         margin-left: 10px;
     }
  }
+
 
